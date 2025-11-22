@@ -1,7 +1,9 @@
 import { Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 export const About = () => {
+  const navigate = useNavigate();
   return (
     <section id="about" className="py-24 bg-muted/30 relative overflow-hidden">
       {/* Background Elements */}
@@ -34,19 +36,28 @@ export const About = () => {
             </div>
 
             {/* Call to Action */}
-            <div className="flex items-center gap-4 pt-4">
-              <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg animate-pulse">
-                <Phone className="w-8 h-8 text-white" />
+            <div className="space-y-4 pt-4">
+              <div className="flex items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg animate-pulse">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Call us anytime</p>
+                  <a
+                    href="tel:+918904988715"
+                    className="text-xl font-bold text-accent hover:text-accent/80 transition-colors duration-300"
+                  >
+                    +91 890 498 8715
+                  </a>
+                </div>
               </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Call us anytime</p>
-                <a
-                  href="tel:+918904988715"
-                  className="text-xl font-bold text-accent hover:text-accent/80 transition-colors duration-300"
-                >
-                  +91 890 498 8715
-                </a>
-              </div>
+              <Button 
+                size="lg"
+                onClick={() => navigate("/contact")}
+                className="bg-accent hover:bg-accent/90 text-white shadow-lg hover:shadow-glow transition-all duration-300"
+              >
+                Get In Touch
+              </Button>
             </div>
           </div>
 
