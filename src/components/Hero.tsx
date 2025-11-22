@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-business.jpg";
+import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
+  const navigate = useNavigate();
+  
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Animated Background Gradient */}
@@ -57,6 +60,7 @@ export const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
             <Button 
               size="lg"
+              onClick={() => navigate("/contact")}
               className="group bg-accent hover:bg-accent/90 text-white shadow-2xl hover:shadow-glow transition-all duration-500 text-lg px-8 py-6 hover:scale-105"
             >
               Contact Us
@@ -65,6 +69,7 @@ export const Hero = () => {
             <Button 
               size="lg"
               variant="outline"
+              onClick={() => navigate("/about")}
               className="glass-card border-2 border-white/30 text-white hover:bg-white/10 text-lg px-8 py-6 hover:scale-105 transition-all duration-300"
             >
               Learn More
