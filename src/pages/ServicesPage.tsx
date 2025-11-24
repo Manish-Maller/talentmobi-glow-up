@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Users, TrendingUp, Award, Target, Briefcase, GraduationCap } from "lucide-react";
+import { ArrowLeft, Users, TrendingUp, Award, Target, Briefcase, GraduationCap, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
@@ -69,6 +69,17 @@ const ServicesPage = () => {
         "Skills training programs",
         "Career development planning",
         "Learning management systems"
+      ]
+    },
+    {
+      icon: Code,
+      title: "Software Development",
+      description: "Custom software solutions to digitalize and streamline your business operations.",
+      details: [
+        "Website development",
+        "Mobile app development",
+        "Custom software solutions",
+        "API integration and development"
       ]
     }
   ];
